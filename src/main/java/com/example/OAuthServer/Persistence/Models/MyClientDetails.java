@@ -19,6 +19,7 @@ public class MyClientDetails extends ClientDAO implements ClientDetails
         this.setAuthorizedGrantType(clientDAO.getAuthorizedGrantType());
         this.setClientScope(clientDAO.getClientScope());
         this.setAutoApprove(clientDAO.isAutoApprove());
+        this.setRedirectUris(clientDAO.getRedirectUris());
     }
 
 
@@ -49,7 +50,7 @@ public class MyClientDetails extends ClientDAO implements ClientDetails
 
     @Override
     public Set<String> getRegisteredRedirectUri() {
-        return null;
+        return this.getRedirectUris();
     }
 
     @Override

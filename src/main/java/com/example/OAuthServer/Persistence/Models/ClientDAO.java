@@ -22,4 +22,5 @@ public class ClientDAO
     private Set<String> authorizedGrantType;
     private Set<String> clientScope;
     private boolean autoApprove;
+    private Set<String> redirectUris;
 }
